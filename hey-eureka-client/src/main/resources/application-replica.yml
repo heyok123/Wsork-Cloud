@@ -1,0 +1,16 @@
+server:
+  port: 17772
+spring:
+  application:
+    name: hey-eureka-client
+eureka:
+  client:
+    #注册到eureka注册中心
+    register-with-eureka: true
+    #获取注册实例列表
+    fetch-registry: true
+    #配置注册中心地址
+    service-url:
+      #配置注册中心地址 同时注册到两个注册中心
+      defaultZone: http://replica1:17769/eureka/,http://replica2:17768/eureka/
+
